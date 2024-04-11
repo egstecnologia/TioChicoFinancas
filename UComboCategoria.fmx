@@ -1,0 +1,118 @@
+object FrmComboCategoria: TFrmComboCategoria
+  Left = 0
+  Top = 0
+  Caption = 'Form1'
+  ClientHeight = 480
+  ClientWidth = 332
+  Fill.Kind = Solid
+  Position = MainFormCenter
+  StyleBook = FrmPrincipal.StyleBook1
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnShow = FormShow
+  DesignerMasterStyle = 0
+  object LayComboCategoria: TLayout
+    Align = Top
+    Size.Width = 332.000000000000000000
+    Size.Height = 50.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 0
+    object LblTituloComboCategoria: TLabel
+      Align = Contents
+      StyledSettings = [Family]
+      Size.Width = 332.000000000000000000
+      Size.Height = 50.000000000000000000
+      Size.PlatformDefault = False
+      TextSettings.Font.Size = 16.000000000000000000
+      TextSettings.Font.StyleExt = {00070000000000000004000000}
+      TextSettings.FontColor = xFF535C68
+      TextSettings.HorzAlign = Center
+      Text = 'Categorias'
+      TabOrder = 2
+    end
+    object ImgVoltarComboCategoria: TImage
+      MultiResBitmap.Height = 32
+      MultiResBitmap.Width = 32
+      MultiResBitmap = <
+        item
+          Width = 32
+          Height = 32
+          PNG = {
+            89504E470D0A1A0A0000000D4948445200000020000000200806000000737A7A
+            F4000000017352474200AECE1CE90000000467414D410000B18F0BFC61050000
+            01E9494441545847E597512B045114C7CF3DBB6B4CBB222FBCF3253C50446945
+            A895B45294F051E44D511ED466AC342509254A96F0E213F80E2C661A6376EEB5
+            77F7AE68C618638C07BF977BCF99A9FFBF73EEBD7307FE3D448CBEC94C2DB4DA
+            96DD16B3EEAE5555B5453A3028465F8C4ECEF7EAB67E4B905C50A9F9389BCD26
+            C5A3C0F836C0C535F6B227839CAA6648B701C9EDEA3C38BE5A50136F80842C52
+            6FA462869CCBE59E45F86DBEAC809738307AF413718EA781D189D92EA6B15D37
+            71C6E0AA1EA4311106E6D31654C40D3CC42438161A179721D1BFB9B9FC285281
+            7135109538C761204A71CE0703518B73DE0C788A03BDA9A7B1BE7C7EF55EA442
+            A362C06BAB9945B0A446582ABFF92052616190674B2123D9B91E1DAC7DD77DFE
+            CB50CA2E1181AEFF85380791747CEB631436C5629121059C7E02CB10B948696A
+            6A3CFB721172730D2CBE0884846D5243932ABEB66199820C5A5A51145DC4A1E1
+            FB202A534013075475451371287C30C089DA846317ECE4D70A44A669AA835BB9
+            BB4A52E930935910B7A29FE3A8400DAF4A50A0E771339E0EA3129F1AE04461C2
+            F320AAB4234586DDCE0904ECB4A5D2960803E359811A7F7A29E5EC6CAC9EA448
+            DD90B312ECE0572FA5EFA99930C0103D67A768C6C6ABF3E0F86AC17B06C7675A
+            12186F0FEBD7ECBF03F00A057DFF3FD51522460000000049454E44AE426082}
+          FileName = 'C:\Projetos\Paralelos\TioChicoFinancas\IMG\seta-esquerda.png'
+        end>
+      Align = Left
+      Margins.Left = 10.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 10.000000000000000000
+      Margins.Bottom = 10.000000000000000000
+      Position.X = 10.000000000000000000
+      Position.Y = 10.000000000000000000
+      Size.Width = 33.000000000000000000
+      Size.Height = 30.000000000000000000
+      Size.PlatformDefault = False
+      OnClick = ImgVoltarComboCategoriaClick
+    end
+  end
+  object ListVComboCategorias: TListView
+    ItemAppearanceClassName = 'TDynamicAppearance'
+    ItemEditAppearanceClassName = 'TDynamicAppearance'
+    HeaderAppearanceClassName = 'TListHeaderObjects'
+    FooterAppearanceClassName = 'TListHeaderObjects'
+    ItemSpaces.Left = 0.000000000000000000
+    ItemSpaces.Right = 0.000000000000000000
+    Align = Client
+    CanParentFocus = True
+    Size.Width = 332.000000000000000000
+    Size.Height = 430.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    ItemAppearance.ItemHeight = 50
+    ItemAppearanceObjects.ItemObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'TxtCategoria'
+        AppearanceClassName = 'TTextObjectAppearance'
+        Appearance.Font.Size = 16.000000000000000000
+        Appearance.TextAlign = Leading
+        Appearance.TextColor = xFF535C68
+        Appearance.Width = 234.000000000000000000
+        Appearance.Height = 36.000000000000000000
+        Appearance.PlaceOffset.X = 63.000000000000000000
+        Appearance.PlaceOffset.Y = 5.000000000000000000
+      end
+      item
+        AppearanceObjectName = 'ImgCategoriaListViwer'
+        AppearanceClassName = 'TImageObjectAppearance'
+        Appearance.Width = 40.000000000000000000
+        Appearance.Height = 40.000000000000000000
+        Appearance.PlaceOffset.X = 15.000000000000000000
+        Appearance.PlaceOffset.Y = 5.000000000000000000
+      end>
+    ItemAppearanceObjects.ItemEditObjects.ObjectsCollection = <
+      item
+        AppearanceObjectName = 'Text1'
+        AppearanceClassName = 'TTextObjectAppearance'
+      end>
+    CanSwipeDelete = False
+    OnItemClick = ListVComboCategoriasItemClick
+    ShowSelection = False
+  end
+end

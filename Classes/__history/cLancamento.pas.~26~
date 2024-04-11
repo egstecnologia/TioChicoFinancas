@@ -1,0 +1,243 @@
+unit cLancamento;
+
+interface
+
+uses FireDAC.Comp.Client, FireDAC.DApt, System.SysUtils, FMX.Graphics;
+
+type
+  TLancamento = class
+  private
+    Fconn: TFDConnection;
+    FidCategoria: Integer;
+    Fdescricao: String;
+    Fvalor: Double;
+    FidLancamento: Integer;
+    Fdata: TDateTime;
+    FdataAte: String;
+    FdataDe: String;
+
+  public
+    constructor Create(conn: TFDConnection);
+    property idLancamento: Integer read FidLancamento write FidLancamento;
+    property idCategoria: Integer read FidCategoria write FidCategoria;
+    property valor: Double read Fvalor write Fvalor;
+    property data: TDateTime read Fdata write Fdata;
+    property dataDe: String read FdataDe write FdataDe;
+    property dataAte: String read FdataAte write FdataAte;
+    property descricao: String read Fdescricao write Fdescricao;
+
+
+
+    function ListarLancamento(qtdeResultado: Integer; out erro: String): TFDQuery;
+    function Inserir(out erro: String): Boolean;
+    function Alterar(out erro: String): Boolean;
+    function Excluir(out erro: String): Boolean;
+  end;
+
+implementation
+
+uses UDataModule;
+
+constructor TLancamento.Create(conn: TFDConnection);
+begin
+  Fconn := conn;
+end;
+
+function TLancamento.Inserir(out erro: String): Boolean;
+var
+  qry: TFDQuery;
+begin
+ if idCategoria <= 0 then
+  begin
+    erro := 'Informe a categoria do lançamento';
+    Result := false;
+    exit;
+  end;
+  if descricao = '' then
+  begin
+    erro := 'Informe a descricao do lançamento';
+    Result := false;
+    exit;
+  end;
+  try
+
+    Fconn.StartTransaction;
+
+    try
+      qry := TFDQuery.Create(nil);
+      qry.Connection := Fconn;
+
+      begin
+        qry.Close;
+        qry.sql.Clear;
+        qry.sql.Add('INSERT INTO TAB_LANCAMENTO(idCategoria, valor, data, descricao)');
+        qry.sql.Add('VALUES(:idCategoria, :valor, :data, :descricao)');
+        qry.ParamByName('idCategoria').AsInteger := idCategoria;
+        qry.ParamByName('valor').AsFloat := valor;
+        qry.ParamByName('data').AsDate := data;
+        qry.ParamByName('descricao').AsString := descricao;
+        qry.ExecSQL;
+      end;
+
+       Result := true;
+       erro := '';
+
+    except
+      on ex: Exception do
+      begin
+        Result := False;
+        erro := 'Erro ao inserir a lancamento: ' + ex.Message;
+      end;
+    end;
+  finally
+    qry.DisposeOf;
+
+  end;
+
+end;
+
+function TLancamento.Alterar(out erro: String): Boolean;
+var
+  qry: TFDQuery;
+begin
+
+ if idCategoria <= 0 then
+  begin
+    erro := 'Informe a categoria do lançamento';
+    Result := false;
+    exit;
+  end;
+  if descricao = '' then
+  begin
+    erro := 'Informe a descricao do lançamento';
+    Result := false;
+    exit;
+  end;
+
+  try
+    qry := TFDQuery.Create(nil);
+    qry.Connection := Fconn;
+    Fconn.StartTransaction;
+
+    try
+      begin
+      qry.Close;
+        qry.sql.Clear;
+        qry.sql.Add('UPDATE TAB_LANCAMENTO SET idCategoria = :idCategoria , valor = :valor, ');
+        qry.SQL.Add('data = :data, descricao = :descricao)');
+        qry.sql.Add('WHERE idLancamento =: idLancamento');
+        qry.ParamByName('idLancamento').AsInteger := idLancamento;
+        qry.ParamByName('idCategoria').AsInteger := idCategoria;
+        qry.ParamByName('valor').AsFloat := valor;
+        qry.ParamByName('data').AsDate := data;
+        qry.ParamByName('descricao').AsString := descricao;
+        qry.ExecSQL;
+      end;
+      Fconn.Commit;
+
+    except
+      on ex: Exception do
+      begin
+        Fconn.Rollback;
+        Raise
+      end;
+    end;
+  finally
+    qry.Free;
+  end;
+
+end;
+
+function TLancamento.Excluir(out erro: String): Boolean;
+var
+  qry: TFDQuery;
+begin
+
+if idLancamento <= 0 then
+  begin
+    erro := 'Informe o lançamento';
+    Result := false;
+    exit;
+  end;
+
+  try
+    qry := TFDQuery.Create(nil);
+    qry.Connection := Fconn;
+    Fconn.StartTransaction;
+    try
+
+      begin
+        qry.Close;
+        qry.sql.Clear;
+        qry.sql.Add('DELETE FROM TAB_LANCAMENTO');
+        qry.sql.Add('WHERE idLancamento = :idLancamento');
+        qry.ParamByName('idLancamento').AsInteger := idLancamento;
+        qry.ExecSQL;
+      end;
+      Fconn.Commit
+    except
+      on ex: Exception do
+      begin
+        Fconn.Rollback;
+        Raise
+      end;
+    end;
+  finally
+    qry.Free;
+  end;
+
+end;
+
+function TLancamento.ListarLancamento(qtdeResultado: Integer; out erro: String): TFDQuery;
+var
+  qry: TFDQuery;
+begin
+
+  try
+    qry := TFDQuery.Create(nil);
+    qry.Connection := Fconn;
+//    Fconn.StartTransaction;
+
+    begin
+      qry.Active := false;
+      qry.sql.Clear;
+      qry.sql.Add('SELECT L.*, C.descricao AS descricaoCategoria, C.icone');
+      qry.sql.Add('FROM TAB_LANCAMENTO L');
+      qry.SQL.Add('JOIN TAB_CATEGORIA C ON (C.idCategoria = L.idCategoria)');
+      qry.sql.Add('WHERE 1 = 1');
+
+      if idLancamento > 0 then
+      begin
+        qry.sql.Add('AND L.idLancamento = :idLancamento');
+        qry.ParamByName('idLancamento').AsInteger  := idLancamento;
+      end;
+
+      if idCategoria > 0 then
+      begin
+        qry.sql.Add('AND L.idCategoria = :idCategoria');
+        qry.ParamByName('idCategoria').AsInteger  := idCategoria;
+      end;
+
+      if (dataDe <> '') AND (dataAte <> '') then
+          qry.sql.Add('AND L.DATA BETWEEN ''' + dataDe + ''' AND ''' + dataAte + '''');
+
+      qry.SQL.Add('ORDER BY L.DATA DESC');
+
+//      if qtdeResultado > 0 then
+//          qry.SQL.Add('LIMIT ' + qtdeResultado.ToString);
+
+      qry.Active := True;
+    end;
+    Result := qry;
+    erro :='';
+
+  except
+    on ex:Exception do
+    begin
+    Result := nil;
+    erro := 'Erro ao consultar lançamentos: ' + ex.Message;
+    end;
+  end;
+end;
+
+end.

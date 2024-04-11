@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/02/17 17:16:06.000.386,=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/02/17 17:17:58.000.806,C:\Projetos\Paralelos\TioChicoFinancas\ULogin.pas=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/02/17 17:17:58.000.806,C:\Projetos\Paralelos\TioChicoFinancas\ULogin.fmx=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Unit1.fmx</Transaction>
+    <Transaction>2024/02/17 17:18:07.000.763,C:\Projetos\Paralelos\TioChicoFinancas\TioChicoFinancas.dproj=C:\Users\EricGaldino\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2024/02/22 16:58:44.000.857,=C:\Projetos\Paralelos\TioChicoFinancas\Units\u99Permissions.pas</Transaction>
+    <Transaction>2024/02/25 18:15:34.000.231,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/02/25 18:17:10.000.554,C:\Projetos\Paralelos\TioChicoFinancas\UPrincipal.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/02/25 18:17:10.000.554,C:\Projetos\Paralelos\TioChicoFinancas\UPrincipal.fmx=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx</Transaction>
+    <Transaction>2024/03/02 09:08:01.000.608,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/02 09:08:59.000.784,C:\Projetos\Paralelos\TioChicoFinancas\ULancamentos.fmx=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx</Transaction>
+    <Transaction>2024/03/02 09:08:59.000.784,C:\Projetos\Paralelos\TioChicoFinancas\ULancamentos.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 18:50:46.000.264,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 18:51:01.000.437,C:\Projetos\Paralelos\TioChicoFinancas\ULancamentosCadastro.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/04 18:51:01.000.437,C:\Projetos\Paralelos\TioChicoFinancas\ULancamentosCadastro.fmx=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx</Transaction>
+    <Transaction>2024/03/05 13:50:15.000.020,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/05 13:50:48.000.621,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/05 13:52:40.000.437,C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas=C:\Projetos\Paralelos\TioChicoFinancas\UCategorias.pas</Transaction>
+    <Transaction>2024/03/05 13:52:40.000.437,C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx=C:\Projetos\Paralelos\TioChicoFinancas\UCategorias.fmx</Transaction>
+    <Transaction>2024/03/05 22:52:49.000.998,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/05 22:53:17.000.084,C:\Projetos\Paralelos\TioChicoFinancas\UCategoriasCadastro.fmx=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx</Transaction>
+    <Transaction>2024/03/05 22:53:17.000.084,C:\Projetos\Paralelos\TioChicoFinancas\UCategoriasCadastro.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/06 21:31:43.000.280,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/06 21:32:17.000.183,C:\Projetos\Paralelos\TioChicoFinancas\UDataModule.dfm=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.dfm</Transaction>
+    <Transaction>2024/03/06 21:32:17.000.183,C:\Projetos\Paralelos\TioChicoFinancas\UDataModule.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/07 19:37:23.000.548,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/07 19:43:27.000.034,C:\Projetos\Paralelos\TioChicoFinancas\Classes\cCategoria.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/19 21:36:09.000.200,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/03/19 21:36:51.000.168,C:\Projetos\Paralelos\TioChicoFinancas\Classes\cLancamento.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/02 17:31:30.000.960,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/02 17:31:56.000.262,=C:\Projetos\Paralelos\TioChicoFinancas\Units\uFormat.pas</Transaction>
+    <Transaction>2024/04/03 17:53:46.000.772,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/03 17:54:11.000.664,C:\Projetos\Paralelos\TioChicoFinancas\Classes\cUsuario.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/04 22:28:47.000.790,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/04 22:29:26.000.202,C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas=C:\Projetos\Paralelos\TioChicoFinancas\UComboCategoria.pas</Transaction>
+    <Transaction>2024/04/04 22:29:26.000.202,C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx=C:\Projetos\Paralelos\TioChicoFinancas\UComboCategoria.fmx</Transaction>
+    <Transaction>2024/04/09 23:30:12.000.635,=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/09 23:32:02.000.518,C:\Projetos\Paralelos\TioChicoFinancas\UResumo.pas=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.pas</Transaction>
+    <Transaction>2024/04/09 23:32:02.000.518,C:\Projetos\Paralelos\TioChicoFinancas\UResumo.fmx=C:\Projetos\Paralelos\TioChicoFinancas\Unit1.fmx</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<NoProfile Android64="bcbe3524" Android="bcbe3524"/>
+	</ActiveMobileDevice>
+</BorlandProject>
